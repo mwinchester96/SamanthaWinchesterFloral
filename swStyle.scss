@@ -1,0 +1,75 @@
+/* Style Sheet for Samantha Winchester Flowers */
+
+/* Variables */
+$mainColor: #ffe5fe;
+$whiteColor: #ffffff;
+$golden: #c9b932;
+$mainFont: Didot;
+
+@font-face {
+  font-family: Kon Tiki Enchanted JF Regular;
+  src: url("Fonts/Kon Tiki Enchanted JF Regular.ttf");
+}
+
+body {
+  background-color: $whiteColor;
+}
+
+h1 {
+  font-family: Kon Tiki Enchanted JF Regular;
+  font-size: 100pt;
+}
+
+.navbar {
+  margin-bottom: 50px;
+  border-radius: 0;
+  background-color: $whiteColor;
+  border-color: #f4f2f4 $whiteColor #f4f2f4 $whiteColor;
+
+    .navbar-nav {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+      font-family: $mainFont;
+
+      li a{
+        background-color: $whiteColor;
+        border-left: 1px solid #f4f2f4;
+        border-right: 1px solid #f4f2f4; 
+        color: $golden;
+        &:link{
+        }
+
+        &:hover{
+          color: $golden;
+
+        }
+
+        &:active{
+          background-color: #f4f2f4;
+          color: $golden;
+        }
+      }
+
+    }
+
+    .navbar-collapse {
+      text-align: center;
+    }
+
+}
+
+/* Remove the jumbotron's default bottom margin */ 
+ .jumbotron {
+  background: url("pretty flower.jpg");
+  background-repeat: no-repeat;
+  background-color: $whiteColor;
+  background-size: 37%;
+  margin-bottom: 0;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: $whiteColor;
+  padding: 25px;
+}
