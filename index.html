@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+  <script type="text/javascript" src="assets/javascripts/instafeed.min.js"></script>
+
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="assets/style/swStyle.css">
 
@@ -55,33 +56,21 @@
     </div>
 </section>
 
-
 <!-- GALLERY -->
-<section id="photos">
-  <img src="assets/images/gallery/wreath1.jpg" alt="Wreath 1">
-  <img src="assets/images/gallery/wreath2.jpg" alt="Wreath 2">
-  <img src="assets/images/gallery/wreath3.jpg" alt="Wreath 3">
-  <img src="assets/images/gallery/wreath4.jpg" alt="Wreath 4">
-  <img src="assets/images/gallery/wreath5.jpg" alt="Wreath 5">
-  <img src="assets/images/gallery/wreath6.jpg" alt="Wreath 6">
-  <img src="assets/images/gallery/wreath7.jpg" alt="Wreath 7">
-  <img src="assets/images/gallery/wreath8.jpg" alt="Wreath 8">
-  <img src="assets/images/gallery/wreath9.jpg" alt="Wreath 9">
-  <img src="assets/images/gallery/arrangement1.jpg" alt="Arrangement 1">
-  <img src="assets/images/gallery/arrangement2.jpg" alt="Arrangement 2">
-  <img src="assets/images/gallery/arrangement3.jpg" alt="Arrangement 3">
-  <img src="assets/images/gallery/arrangement4.jpg" alt="Arrangement 4">
-  <img src="assets/images/gallery/arrangement5.jpg" alt="Arrangement 5">
-  <img src="assets/images/gallery/arrangement6.jpg" alt="Arrangement 6">
-  <img src="assets/images/gallery/arrangement7.jpg" alt="Arrangement 7">
-  <img src="assets/images/gallery/arrangement8.jpg" alt="Arrangement 8">
-  <img src="assets/images/gallery/arrangement9.jpg" alt="Arrangement 9">
-  <img src="assets/images/gallery/arrangement10.jpg" alt="Arrangement 10">
-  <img src="assets/images/gallery/arrangement11.jpg" alt="Arrangement 11">
-</section>
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: "user",
+        userId: "3026893941",
+        clientId: '8effcaa172f54a269b58bb44c30d44ff',
+        accessToken: "3026893941.1677ed0.8950d5f5db7942b9ae2ca390c5e3e39b",
+        resolution: "thumbnail",
+        template: 
+        '<div class="imageContainer"><img src="{{image}}"/><p class="textOverlay">{{model.tags}}<p></div>'
+    });
+    feed.run();
+</script>
 
-<!-- CONTACT -->
-
+<div id="instafeed"></div>
 
 <footer class="container-fluid text-center">
   <p>Online Store Copyright</p>  
