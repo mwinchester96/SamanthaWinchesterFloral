@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>SWFloral</title>
+  <title>SJW Floral</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets/javascripts/instafeed.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="assets/style/swStyle.css">
-
   <link rel="icon" href="assets/images/SWFloral icon.png">
 
 </head>
@@ -39,10 +39,10 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-center">
-        <li><a class="active" href="#">HOME</a></li>
-        <li><a href="#available">AVAILABLE NOW</a></li>
-        <li><a href="#gallery">GALLERY</a></li>
-        <li><a href="#contact">CONTACT US</a></li>
+        <li><a href="">Home</a></li>
+        <li><a href="" onclick ="gallery()">Portfolio</a></li>
+        <li><a href="" onclick="availableNow()">Available Now</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -64,8 +64,7 @@
         clientId: '8effcaa172f54a269b58bb44c30d44ff',
         accessToken: "3026893941.1677ed0.8950d5f5db7942b9ae2ca390c5e3e39b",
         resolution: "thumbnail",
-        template: 
-        '<div class="imageContainer"><img src="{{image}}"/><p class="textOverlay">{{model.tags}}<p></div>'
+        template: '<div class="imageContainer"><img src="{{image}}"/><p class="textOverlay">{{model.tags}}<p></div>'
     });
     feed.run();
 </script>
@@ -73,11 +72,9 @@
 <div id="instafeed"></div>
 
 <footer class="container-fluid text-center">
-  <p>Online Store Copyright</p>  
-  <form class="form-inline">Get deals:
-    <input type="email" class="form-control" size="50" placeholder="Email Address">
-    <button type="button" class="btn btn-danger">Sign Up</button>
-  </form>
+  <i class="fa fa-facebook" aria-hidden="true"></i> 
+  <i class="fa fa-instagram" aria-hidden="true"></i> 
+  <i class="fa fa-pinterest" aria-hidden="true"></i> 
 </footer>
 
 </body>
