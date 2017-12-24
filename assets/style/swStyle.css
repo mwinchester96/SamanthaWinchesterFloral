@@ -5,12 +5,9 @@
   src: url("../fonts/Kon Tiki Enchanted JF Regular.ttf"); }
 body {
   background-color: #ffffff;
-  overflow-x: hidden; }
-
-.content {
-  width: 80%;
-  margin: auto; }
-
+  overflow-x: hidden; 
+}
+ 
 h1 {
   font-family: Kon Tiki Enchanted JF Regular;
   font-size: 40pt; }
@@ -74,6 +71,7 @@ p {
     padding: 38px; }
 
 #instafeed {
+  clear: both;
   width: 100%;
   margin: auto;
   display: flex;
@@ -99,11 +97,20 @@ p {
     width: 300px;
     margin: 1.5px; }
 
-/* Add a gray background color and some padding to the footer */
-footer {
-  clear: both;
-  background-color: #ffffff;
-  padding: 25px; }
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.content {
+  padding-bottom: 40px;
+  min-height: 100%;
+  margin: 0 auto -60px;
+}
+
+footer, .push {
+  height: 60px;
+}
 
 i.fa {
   color: white;
@@ -112,8 +119,8 @@ i.fa {
   height: 30px;
   border-radius: 50%;
   text-align: center;
-  line-height: 31px;
+  line-height: 30px;
   vertical-align: middle;
-  padding: 0px; }
+}
 
 /*# sourceMappingURL=swStyle.css.map */
