@@ -13,6 +13,7 @@ $mainFont: Didot;
 
 body {
   background-color: $whiteColor;
+  overflow-x: hidden;
 }
 
 .content {
@@ -151,6 +152,16 @@ footer {
   padding: 25px;
 }
 
-
+i.fa {
+  color: white;
+  background: gray;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 31px;
+  vertical-align: middle;
+  padding: 0px;
+}
 
 
