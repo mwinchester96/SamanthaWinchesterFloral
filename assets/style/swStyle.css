@@ -4,10 +4,12 @@
   font-family: Kon Tiki Enchanted JF Regular;
   src: url("../fonts/Kon Tiki Enchanted JF Regular.ttf"); }
 body {
-  background-color: #ffffff; }
+  background-color: #ffffff; 
+  overflow-x: hidden;
+}
 
 .content {
-  width: 80%;
+  width: 90%;
   margin: auto; }
 
 h1 {
@@ -27,7 +29,7 @@ p {
   font-size: 14pt; }
 
 .navbar {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   border-radius: 0;
   background-color: #ffffff;
   border-color: #f4f2f4 #ffffff #f4f2f4 #ffffff; }
@@ -101,6 +103,7 @@ p {
 footer {
   clear: both;
   background-color: #ffffff;
-  padding: 25px; }
+  padding-top: 50px; 
+  padding-bottom: 30px;}
 
 /*# sourceMappingURL=swStyle.css.map */
