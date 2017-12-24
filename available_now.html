@@ -16,9 +16,6 @@
    <body>
       <div class="page-wrap">
          <div class="jumbotron">
-            <div class="container text-center">
-               <img src="assets/images/Samantha Win Flowers.png" alt="SAMANTHA WINCHESTER">
-            </div>
          </div>
          <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -32,36 +29,35 @@
                </div>
                <div class="collapse navbar-collapse" id="myNavbar">
                   <ul class="nav navbar-nav navbar-center">
-                     <li><a href="index.html">Home</a></li>
-                     <li><a href="portfolio.html">Portfolio</a></li>
-                     <li><a href="available_now.html">Available Now</a></li>
-                     <li><a href="contact.html">Contact</a></li>
+                     <li><a href="index.html">HOME</a></li>
+                     <li><a href="portfolio.html">PORTFOLIO</a></li>
+                     <li><a href="available_now.html">AVAILABLE NOW</a></li>
+                     <li><a href="contact.html">CONTACT</a></li>
                   </ul>
                </div>
             </div>
          </nav>
-         <!-- AVAILABLE NOW -->
-         <section id="available" class="page">
-            <div class="">
-            </div>
-         </section>
-         <!-- GALLERY of images with #AvailableNow -->
-         <script type="text/javascript">
-            var feed = new Instafeed({
-                get: "user",
-                userId: "3026893941",
-                clientId: '8effcaa172f54a269b58bb44c30d44ff',
-                accessToken: "3026893941.1677ed0.8950d5f5db7942b9ae2ca390c5e3e39b",
-                resolution: "thumbnail",
-                filter: function(image) {
-                    return image.tags.indexOf('AvailableNow') >= 0;
-                },
-                template: '<div class="imageContainer"><img src="{{image}}"/><p class="textOverlay">{{model.tags}}<p></div>'
-            });
-            feed.run();
-         </script>
-         <div id="instafeed"></div>
+         <div class="content">
+          <!-- GALLERY of images with #AvailableNow -->
+          <script type="text/javascript">
+              var feed = new Instafeed({
+                  get: "user",
+                  userId: "3026893941",
+                  clientId: '8effcaa172f54a269b58bb44c30d44ff',
+                  accessToken: "3026893941.1677ed0.8950d5f5db7942b9ae2ca390c5e3e39b",
+                  resolution: "thumbnail",
+                  filter: function(image) {
+                      return image.tags.indexOf('AvailableNow') >= 0;
+                  },
+                  template: '<div class="imageContainer"><img src="{{image}}"/><p class="textOverlay">{{model.tags}}<p></div>'
+              });
+              feed.run();
+          </script>
+          <div id="instafeed"></div>
+         </div>
+         
       </div>
+      
       <footer class="container-fluid text-center">
          <i class="fa fa-facebook" aria-hidden="true"></i> 
          <i class="fa fa-instagram" aria-hidden="true"></i> 
