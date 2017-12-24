@@ -115,16 +115,33 @@ p{
 }
 
 #instafeed {
+  width: 100%;
   margin: auto;
+
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+   /* You can set flex-wrap and
+      flex-direction individually */
+   flex-direction: row;
+   flex-wrap: wrap;
+   /* Or do it all in one line
+     with flex flow */
+   flex-flow: row wrap;
+   /* tweak where items line
+      up on the row
+      valid values are: flex-start,
+      flex-end, space-between,
+      space-around, stretch */
+   align-content: flex-end;
 
-  .thumbnail{
+  .thumbnail {
     margin: 5px;
-  }
+  } 
 
   .imageText {
-    width: 150px;
+    width: 300px;
     margin: 1.5px;
   }
 }
