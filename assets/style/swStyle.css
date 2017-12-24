@@ -4,12 +4,10 @@
   font-family: Kon Tiki Enchanted JF Regular;
   src: url("../fonts/Kon Tiki Enchanted JF Regular.ttf"); }
 body {
-  background-color: #ffffff; 
-  overflow-x: hidden;
-}
+  background-color: #ffffff; }
 
 .content {
-  width: 90%;
+  width: 80%;
   margin: auto; }
 
 h1 {
@@ -29,7 +27,7 @@ p {
   font-size: 14pt; }
 
 .navbar {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border-radius: 0;
   background-color: #ffffff;
   border-color: #f4f2f4 #ffffff #f4f2f4 #ffffff; }
@@ -64,14 +62,15 @@ p {
 .headerImage {
   width: 100vw; }
 
-.introduction img {
-  width: 40%;
-  margin-right: 20px;
-  float: left; }
-.introduction .img-circle {
-  border-radius: 50%; }
-.introduction .intro-paragraph {
-  padding: 10px; }
+.introduction {
+  display: inline-block;
+  vertical-align: middle; }
+  .introduction img {
+    width: 45%;
+    float: left;
+    margin-right: 15px; }
+  .introduction .intro-paragraph {
+    padding: 38px; }
 
 #instafeed {
   width: 100%;
@@ -103,7 +102,6 @@ p {
 footer {
   clear: both;
   background-color: #ffffff;
-  padding-top: 50px; 
-  padding-bottom: 30px;}
+  padding: 25px; }
 
 /*# sourceMappingURL=swStyle.css.map */

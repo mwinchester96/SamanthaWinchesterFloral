@@ -41,7 +41,7 @@ p{
 }
 
 .navbar {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   border-radius: 0;
   background-color: $whiteColor;
   border-color: #f4f2f4 $whiteColor #f4f2f4 $whiteColor;
@@ -98,19 +98,17 @@ p{
 }
 
 .introduction {
+  display: inline-block;
+  vertical-align: middle;
     
   img {
-    width: 40%;
-    margin-right: 20px; 
+    width: 45%;
     float:left;
-  }
-
-  .img-circle {
-    border-radius: 50%;
+    margin-right: 15px;
   }
 
   .intro-paragraph {
-    padding: 10px;
+    padding: 38px;
   }
 }
 
