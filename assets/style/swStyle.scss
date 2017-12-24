@@ -83,12 +83,18 @@ p{
 
 /* Remove the jumbotron's default bottom margin */ 
  .jumbotron {
-  background: url("../images/Samantha Win Flowers.png");
-  background-repeat: no-repeat;
-  background-color: $whiteColor;
-  background-size: 100%;
-  height: 234px;
   margin-bottom: 0;
+  padding: 0;
+  background-color: $whiteColor;
+
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.headerImage {
+  width: 100vw;
 }
 
 .introduction {
@@ -109,12 +115,11 @@ p{
 }
 
 #instafeed {
-  width: 80%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
 
-  .imageContainer{
+  .thumbnail{
     margin: 5px;
   }
 
