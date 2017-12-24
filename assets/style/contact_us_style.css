@@ -1,0 +1,13 @@
+
+
+#googleform {
+  text-align: center;
+}
+
+
+iframe {
+    height: 1000px
+    margin: 0 auto;
+    background-color: #777;
+    display: block;
+}
