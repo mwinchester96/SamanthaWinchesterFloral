@@ -68,6 +68,12 @@ p {
 .headerImage {
     width: 100vw;
 }
+
+.pagecontent {
+  width: 80%;
+  margin: auto;
+}
+
 .introduction {
     display: inline-block;
     vertical-align: middle;
