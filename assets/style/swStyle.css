@@ -79,10 +79,13 @@ p {
     vertical-align: middle;
 }
 .introduction img {
-    width: 45%;
     float: left;
     margin-right: 15px;
+    border-radius: 50%;
+   border:5px solid #ffccd4;
+
 }
+
 .introduction .intro-paragraph {
     padding: 38px;
 }
@@ -142,4 +145,6 @@ i.fa {
     line-height: 30px;
     vertical-align: middle;
 }
+
+
 /*# sourceMappingURL=swStyle.css.map */
