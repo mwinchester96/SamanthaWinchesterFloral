@@ -38,21 +38,29 @@
                </div>
             </div>
          </nav>
-         <script type="text/javascript">
-            var feed = new Instafeed({
-                get: "user",
-                userId: "6801866088",
-                clientId: 'f76506e8bf374a019493c955c17968a4',
-                accessToken: "6801866088.1677ed0.5ed7c9a539cf495b939e4a0f600270e4",
-                resolution: "thumbnail",
-                filter: function(image) {
-                    return image.tags.indexOf('AvailableNow') >= 0;
-                },
-                template: '<div class="imageContainer"><img src="{{image}}"/><p class="textOverlay">{{model.tags}}<p></div>'
-            });
-            feed.run();
-         </script>
-         <div id="instafeed"></div>
+         <div class="content">
+            <script type="text/javascript">
+               var feed = new Instafeed({
+                  get: "user",
+                  userId: "6801866088",
+                  clientId: 'f76506e8bf374a019493c955c17968a4',
+                  accessToken: "6801866088.1677ed0.5ed7c9a539cf495b939e4a0f600270e4",
+                  sortBy: 'most-recent',
+                  mock: true,
+                  limit: 100,
+                  success: function(images) {
+                      $.each(images.data, function(imageID, post) {
+                        if(post.tags.indexOf('availablenow') >= 0) {
+                          var highResThumb = post.images.thumbnail.url.replace('s150x150/', 's320x320/');
+                          $('#instafeed').append('<a href="'+post.link+'" class="thumbnail" target="_blank"><img src="'+highResThumb+'"/></a>');
+                        }
+                     });
+                   }
+                 });
+               feed.run();
+            </script>
+            <div id="instafeed"></div>
+         </div>
          <div class="push"></div>
       </div>
       <footer class="container-fluid text-center">
