@@ -46,7 +46,8 @@
                 accessToken: "6801866088.1677ed0.5ed7c9a539cf495b939e4a0f600270e4",
                 resolution: "thumbnail",
                 filter: function(image) {
-                    return image.tags.indexOf('AvailableNow') >= 0;
+                    console.log(image.tags);
+                    return image.tags.indexOf('availablenow') >= 0;
                 },
                 template: '<div class="imageContainer"><img src="{{image}}"/><p class="textOverlay">{{model.tags}}<p></div>'
             });
