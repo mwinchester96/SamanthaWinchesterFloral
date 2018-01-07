@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>SJW Floral - Available</title>
+      <title>SJW Floral - Portfolio</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -51,7 +51,7 @@
                   limit: 100,
                   success: function(images) {
                       $.each(images.data, function(imageID, post) {
-                        if(post.tags.indexOf('availablenow') >= 0) {
+                        if(post.tags.indexOf('home') >= 0) {
                           var highResThumb = post.images.thumbnail.url.replace('s150x150/', 's320x320/');
                           $('#instafeed').append('<a href="'+post.link+'" class="thumbnail" target="_blank"><img src="'+highResThumb+'"/></a>');
                         }
