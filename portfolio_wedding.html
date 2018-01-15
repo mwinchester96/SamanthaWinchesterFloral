@@ -52,7 +52,9 @@
                   success: function(images) {
                       $.each(images.data, function(imageID, post) {
                         if(post.tags.indexOf('wedding') >= 0) {
-                          var highResThumb = post.images.thumbnail.url.replace('s150x150/', 's320x320/');
+                          // TODO Fix once instagram invalid URL is resolved
+                          // var highResThumb = post.images.thumbnail.url.replace('s150x150/', 's300x300/');
+                          var highResThumb = post.images.thumbnail.url;
                           $('#instafeed').append('<a href="'+post.link+'" class="thumbnail" target="_blank"><img src="'+highResThumb+'"/></a>');
                         }
                      });
