@@ -40,7 +40,9 @@
             </div>
          </nav>
          <div class="content">
+            <div id="instafeed"></div>
             <script type="text/javascript">
+
                var feed = new Instafeed({
                   get: "user",
                   userId: "6801866088",
@@ -49,28 +51,40 @@
                   sortBy: 'most-recent',
                   mock: true,
                   limit: 100,
+
+                  // Called after each load
                   success: function(images) {
                       $.each(images.data, function(imageID, post) {
                         if(post.tags.indexOf('availablenow') >= 0) {
                           // TODO Fix once instagram invalid URL is resolved
                           // var highResThumb = post.images.thumbnail.url.replace('s150x150/', 's300x300/');
                           var highResThumb = post.images.thumbnail.url;
-                          $('#instafeed').append('<a href="'+post.link+'" class="thumbnail" target="_blank"><img src="'+highResThumb+'"/></a>');
+                          $('<a href="'+post.link+'" class="thumbnail" target="_blank"><img src="'+highResThumb+'"/></a>').insertBefore("#load-more");
                         }
                      });
+                   },
+                   after: function() {
+                     if (!this.hasNext()) {
+                        $("#load-more").hide();
+                     }
                    }
                  });
+
                feed.run();
-               console.log("SUCCESS");
+
+               // Add button to load more images
+               $('#instafeed').append('<button style="height:100px;width:100px" type="button" class="thumbnail" id="load-more">Load more...</button>');
+               loadButton = document.getElementById('load-more')
+               loadButton.addEventListener('click', function() {
+                  feed.next();
+               });
             </script>
-            <div id="instafeed"></div>
-            <button id='next-button' onclick=feed.next()>Load More</button>
          </div>
          <div class="push"></div>
       </div>
       <footer class="container-fluid text-center">
          <a href="https://www.facebook.com/SamanthaWinchesterFloralDesigner/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i> </a>
-         <i class="fa fa-instagram fa-lg" aria-hidden="true"></i> 
+         <a href="https://www.instagram.com/sjwfloral/"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
          <i class="fa fa-pinterest fa-lg" aria-hidden="true"></i> 
       </footer>
    </body>
